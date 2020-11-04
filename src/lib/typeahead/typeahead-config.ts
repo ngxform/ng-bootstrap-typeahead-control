@@ -1,5 +1,6 @@
-import {Injectable} from '@angular/core';
-import {PlacementArray} from '../util/positioning';
+import { Injectable } from '@angular/core';
+import * as _ from 'lodash';
+import { PlacementArray } from '../util/positioning';
 
 /**
  * A configuration service for the [`NgbTypeahead`](#/components/typeahead/api#NgbTypeahead) component.
@@ -7,7 +8,7 @@ import {PlacementArray} from '../util/positioning';
  * You can inject this service, typically in your root component, and customize the values of its properties in
  * order to provide default values for all the typeaheads used in the application.
  */
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class NgbTypeaheadConfig {
   container;
   editable = true;
