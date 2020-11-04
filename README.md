@@ -145,7 +145,7 @@ custom-result-template.component.html
 
 custom-result-template.component.ts
 ```js
-import { NgxBootstrapTypeaheadControl } from '@ngxform/ng-bootstrap-typeahead';
+import { NgxBootstrapTypeaheadControl, ResultTemplateContext } from '@ngxform/ng-bootstrap-typeahead';
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { NgxFormGroup } from '@ngxform/platform';
 import { Validators } from '@angular/forms';
@@ -158,7 +158,7 @@ import { Validators } from '@angular/forms';
 export class CustomResultTemplateComponent implements OnInit {
   public demoForm: NgxFormGroup;
 
-  @ViewChild('resultTemplate', { static: true }) resultTemplate: TemplateRef<any>;
+  @ViewChild('resultTemplate', { static: true }) resultTemplate: TemplateRef<ResultTemplateContext>;
 
   ngOnInit(): void {
     const typeaheadOptions: { name: string; flag: string }[] = [
